@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/authPage.css" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet">
+    <title>Registration</title>
+    <link rel="icon" href="images/икона.png" type="image/x-icon">
+
+
+</head>
+<body>
+<header class="header">
+
+    <div class="modal_window">
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="tab">
+                    Регистрация
+                </div>
+                <div id="Register" class="tabcontent active">
+                    <form id="registerForm" action="/index" method="POST">
+                        <label for="registerUsername">Имя пользователя:</label>
+                        <input type="text" id="registerUsername" name="username">
+                        <label for="registerPassword">Пароль:</label>
+                        <input type="password" id="registerPassword" name="password">
+                        <label for="confirmPassword">Подтвердите пароль:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword">
+                        <button type="submit" >Зарегистрироваться</button>
+                        <a href="login.html" class="backToLoginPage">Войти</a>
+                    </form>
+                    <div th:if="${errorMessage}" class="error-message">
+                        <p th:text="${errorMessage}"></p>
+                    </div>
+                    <div th:if="${successMessage}" class="success-message">
+                        <p th:text="${successMessage}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+
+<script src="script/script.js" async></script>
+
+</body>
+</html>
+
+
+
+

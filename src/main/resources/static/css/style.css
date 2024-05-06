@@ -1,0 +1,662 @@
+
+body {  
+    margin: 0;    
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.6;
+    
+}
+
+
+hr {
+    display: block;
+    width: 100%;
+    
+    height: 1px;
+    border: 0;
+    margin: 40px 0;
+
+    background-color: #b4b4b4 ;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+
+/* Header */
+.header {
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 15px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+
+
+/* modal window */
+/* Разделение между login и register */
+.signInText h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.signInText h2::before,
+.signInText h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+
+/* Стили для модального окна */
+
+  .modal {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.799);
+  }
+
+  .modal-content {
+    background:
+    linear-gradient(
+    rgba(23, 29, 58, 0.75),
+    rgba(23, 29, 58, 0.95)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+    background-size: cover;
+    width: 380px;
+    height: 450px;
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all .5s ease;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+
+
+
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .tab button {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: .7;
+  }
+
+  .tab button.active {
+    border-bottom: solid 2px #1059FF;
+    opacity: 1;
+  }
+
+  .tabcontent {
+    display: none;
+  }
+
+  .tabcontent.active {
+    display: block;
+  }
+
+.form-styling {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: #f2f2f2;
+    color: #000000;
+    font-size: 13px;
+}
+
+  label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    color: #ffffff;
+    display: block;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    height: 35px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,.2);
+  }
+
+  input[type="password"] {
+    width: 100%;
+    height: 35px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,.2);
+  }
+
+
+
+
+  button[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1059FF;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0F4FE6;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .close:hover {
+    color: #000000;
+  }
+  
+  
+.tabcontent {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tabcontent.active-prev {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.tabcontent.active {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
+/* Intro */
+.intro{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+    background: #A9DDE4;  
+    -webkit-background-size: cover;
+    background-size: cover;    
+}
+
+
+
+
+
+.intro__title {
+    font-size: 140px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center ;
+    line-height: 1;
+}
+
+
+.intro__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 30px auto 30px ;
+
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 100px 160px;
+    text-align: center;
+}
+
+
+.intro__suptitle {
+    font-size:120px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.intro__suptitle_address{
+    font-size: 24px;
+    width: 460px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+    text-align: left;
+    margin: -135px 0 0 780px;
+}
+
+
+.intro__image{
+    float:right;
+    margin: 20px;  
+}
+
+
+
+
+
+/* Nav */
+.nav {  
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 80px;
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+
+    transition: color 0.2s linear;
+}
+
+
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #5c3bf1;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .2s linear;
+}
+
+
+
+
+.nav__link:hover{
+    color: #5c3bf1;
+}
+
+
+.nav__link:hover::after,
+.nav__link.active::after{
+    opacity: 1;
+}
+
+
+.nav__link.active {
+    color: #5c3bf1;
+}
+
+
+.nav__link__service {
+    display: inline-block;    
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s linear;
+    margin-bottom: 80px;
+}
+
+
+
+
+/* Button */
+.btn {
+    margin: 200px 0 0 400px;
+    align-items: center;
+    display: inline-block;
+    padding: 8px 30px;
+    border: 2px solid  #fff;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: .2s linear, color .2s linear;
+}
+
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #333;
+    
+}
+
+.loginButton {
+    position: absolute;
+    right: 0;
+    align-items: center;
+    display: inline-block;
+    padding: 7px 20px;
+    border: 2px solid  #fff;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+
+    transition: .2s linear, color .2s linear;
+}
+
+.loginButton:hover{
+    background-color: #ffffff;
+    color: #333;
+    
+}
+
+
+
+
+
+
+/* Section */
+.section {
+    padding: 20px 0;
+    color: #333;
+    background-color: #ffffff;
+}
+
+
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+
+.section__suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 20px auto;
+
+}
+
+
+
+.section__text {
+    font-size: 15px;
+    color: #616161;
+}
+
+ 
+
+/* Service */
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 90px;
+}
+
+
+.services__item {
+    width: 400px;
+}
+
+.services__img:hover {
+    transform: scale(1.1);
+}
+
+/* .about__item:hover .about__img img {
+    opacity: .9;
+} */
+
+.services__img {
+    /* background: linear-gradient(to bottom, #50a383,
+    #fce38a); */
+    transition: transform .2s linear;
+}
+
+
+.services__img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+
+
+.title__about{
+    color:#000000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text__about{
+    margin-left: 200px;
+    color: #000000;
+    width: 500px;
+    text-align: center;
+}
+
+
+
+.image__about{
+    float: right;
+    margin-right: 20px;
+    margin-top: -250px;
+    
+}
+
+
+
+/* Services */
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    flex: 1 1 0;
+    padding-left: 85px;
+    padding-right: 35px;
+    position: relative;
+}
+
+
+.services__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+.services__text {
+    font-size: 15px;
+    color: #999;
+
+}
+
+
+.container__services {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #A9DDE4;  
+    -webkit-background-size: cover;
+    background-size: cover;  
+    font-size: 6px;
+}
+
+
+.fotter__inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 100px 160px;
+    text-align: center;
+}
+
+
+.footer__suptitle {
+    font-size: 100px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.image__footer {
+    float: left;
+    margin-top: -120px;
+}
+
+
+.footer__network {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}

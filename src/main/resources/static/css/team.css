@@ -1,0 +1,763 @@
+/* . */
+
+position: relative;
+width: 1440px;
+height: 1908px;
+
+background: #FFFFFF;
+
+
+/* heading */
+
+position: absolute;
+width: 480.05px;
+height: 202.75px;
+left: 479px;
+top: 24px;
+
+
+
+/* image */
+
+position: absolute;
+width: 480.05px;
+height: 202.75px;
+left: 479px;
+top: 24px;
+
+background: url(Perlsmutr_all_1.png);
+
+
+/* Наша команда */
+
+position: absolute;
+width: 280px;
+height: 51px;
+left: 579px;
+top: 100px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 51px;
+text-align: center;
+
+color: #282828;
+
+
+
+/* блок 7 */
+
+position: absolute;
+width: 1283px;
+height: 1507.7px;
+left: 61px;
+top: 264px;
+
+
+
+/* button */
+
+position: absolute;
+width: 413px;
+height: 117px;
+left: 539px;
+top: 1654.7px;
+
+
+
+/* Rectangle 8 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 413px;
+height: 117px;
+left: 539px;
+top: 1654.7px;
+
+border: 2px solid #A9DDE4;
+border-radius: 66.9474px;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 31px 20px;
+gap: 10px;
+
+position: absolute;
+width: 379px;
+height: 96px;
+left: 556px;
+top: 1665.7px;
+
+background: #A9DDE4;
+border-radius: 60px;
+
+
+/* записаться на прием */
+
+width: 339px;
+height: 34px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 34px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #282828;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* background highlight */
+
+position: absolute;
+width: 360px;
+height: 525px;
+left: 151px;
+top: 292.3px;
+
+background: #C9F2F2;
+filter: blur(22.5px);
+
+
+/* gallery */
+
+position: absolute;
+width: 1283px;
+height: 724px;
+left: 61px;
+top: 876px;
+
+
+
+/* svg */
+
+position: absolute;
+width: 80px;
+height: 80px;
+left: 61px;
+top: 1212px;
+
+
+
+/* card1 */
+
+position: absolute;
+width: 1181px;
+height: 724px;
+left: 163px;
+top: 876px;
+
+
+
+/* card */
+
+position: absolute;
+width: 449px;
+height: 671px;
+left: 163px;
+top: 929px;
+
+
+
+/* image */
+
+position: absolute;
+width: 386.06px;
+height: 580px;
+left: 194px;
+top: 929px;
+
+background: url(pixlr-bg-result (10).png);
+
+
+/* Group 59 */
+
+position: absolute;
+width: 449px;
+height: 91px;
+left: 163px;
+top: 1509px;
+
+
+
+/* Rectangle 13 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 449px;
+height: 91px;
+left: 163px;
+top: 1509px;
+
+background: #FFFFFF;
+border: 2px solid #84D7E0;
+
+
+/* Кошелева Ольга Борисовна */
+
+position: absolute;
+width: 428px;
+height: 41px;
+left: 173px;
+top: 1534px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 41px;
+/* identical to box height */
+
+color: #282828;
+
+
+
+/* text */
+
+position: absolute;
+width: 700px;
+height: 724px;
+left: 644px;
+top: 876px;
+
+
+
+/* Group 60 */
+
+position: absolute;
+width: 576px;
+height: 119px;
+left: 644px;
+top: 876px;
+
+
+
+/* Образование: 1996-2001 гг. Новосибирская Государственная Медицинская Академия. */
+
+position: absolute;
+width: 536px;
+height: 119px;
+left: 684px;
+top: 876px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 940px;
+
+background: #A9DDE4;
+
+
+/* Group 65 */
+
+position: absolute;
+width: 659px;
+height: 183px;
+left: 644px;
+top: 1417px;
+
+
+
+/* Профессиональные навыки: Знание анатомии зубов, современных методов лечения и диагностики, принципов обезболивания, основ фармакологии и методов физиотерапии, правил оформления медицинской документации. */
+
+position: absolute;
+width: 619px;
+height: 183px;
+left: 684px;
+top: 1417px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 1481px;
+
+background: #A9DDE4;
+
+
+/* Group 61 */
+
+position: absolute;
+width: 679px;
+height: 94px;
+left: 644px;
+top: 1015px;
+
+
+
+/* 2001-2002 гг. Новосибирская Государственная Областная Клиническая Больница. Отделение челюстно – лицевой хирургии. Врач- стоматолог- интерн. */
+
+position: absolute;
+width: 639px;
+height: 94px;
+left: 684px;
+top: 1015px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 8 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 1019px;
+
+background: #A9DDE4;
+
+
+/* Group 62 */
+
+position: absolute;
+width: 700px;
+height: 89px;
+left: 644px;
+top: 1129px;
+
+
+
+/* 2002-2004 гг. Новосибирская Государственная Медицинская Академия. Ординатура по терапевтической стоматологии на кафедре терапевтической стоматологии. */
+
+position: absolute;
+width: 660px;
+height: 89px;
+left: 684px;
+top: 1129px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 9 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 1133px;
+
+background: #A9DDE4;
+
+
+/* Group 63 */
+
+position: absolute;
+width: 515px;
+height: 61px;
+left: 644px;
+top: 1238px;
+
+
+
+/* 2009 г. Курсы повышения квалификации по терапевтической стоматологии. НГМУ. */
+
+position: absolute;
+width: 475px;
+height: 61px;
+left: 684px;
+top: 1238px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 10 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 1242px;
+
+background: #A9DDE4;
+
+
+/* Group 64 */
+
+position: absolute;
+width: 524px;
+height: 58px;
+left: 644px;
+top: 1319px;
+
+
+
+/* 2014 г. Курсы повышения квалификации по терапевтической стоматологии. КемГМА. */
+
+position: absolute;
+width: 484px;
+height: 58px;
+left: 684px;
+top: 1319px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* Ellipse 11 */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 644px;
+top: 1323px;
+
+background: #A9DDE4;
+
+
+/* doctor1 */
+
+position: absolute;
+width: 418.55px;
+height: 532.3px;
+left: 108.76px;
+top: 264px;
+
+
+
+/* image */
+
+position: absolute;
+width: 418.55px;
+height: 335px;
+left: 108.76px;
+top: 264px;
+
+background: url(pixlr-bg-result (10).png);
+
+
+/* text */
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 162px;
+top: 579.3px;
+
+
+
+/* Rectangle 13 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 162px;
+top: 579.3px;
+
+background: #FFFFFF;
+border: 2px solid #A9DDE4;
+
+
+/* text */
+
+position: absolute;
+width: 280px;
+height: 210.3px;
+left: 190px;
+top: 583px;
+
+
+
+/* Кошелева Ольга Борисовна */
+
+position: absolute;
+width: 246px;
+height: 126px;
+left: 190px;
+top: 583px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 41px;
+
+color: #282828;
+
+
+
+/* Директор. Главный врач. Стоматолог- терапевт. */
+
+position: absolute;
+width: 280px;
+height: 64px;
+left: 190px;
+top: 729.3px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* doctor2 */
+
+position: absolute;
+width: 346.12px;
+height: 532.3px;
+left: 564.88px;
+top: 264px;
+
+
+
+/* card */
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 574px;
+top: 579.3px;
+
+
+
+/* Rectangle 13 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 574px;
+top: 579.3px;
+
+background: #FFFFFF;
+border: 2px solid #A9DDE4;
+
+
+/* Group 57 */
+
+position: absolute;
+width: 280px;
+height: 180px;
+left: 602px;
+top: 585.3px;
+
+
+
+/* Позднякова Наталья Анатольевна */
+
+position: absolute;
+width: 232px;
+height: 126px;
+left: 602px;
+top: 585.3px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 41px;
+
+color: #282828;
+
+
+
+/* Стоматолог-терапевт. */
+
+position: absolute;
+width: 280px;
+height: 34px;
+left: 602px;
+top: 731.3px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* image */
+
+position: absolute;
+width: 344.23px;
+height: 315.29px;
+left: 564.88px;
+top: 264px;
+
+background: url(pixlr-bg-result (2).png);
+
+
+/* doctor3 */
+
+position: absolute;
+width: 351.35px;
+height: 526.3px;
+left: 977px;
+top: 270px;
+
+
+
+/* image */
+
+position: absolute;
+width: 343.82px;
+height: 309px;
+left: 984.54px;
+top: 270px;
+
+background: url(pixlr-bg-result (1).png);
+
+
+/* card */
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 977px;
+top: 579.3px;
+
+
+
+/* Rectangle 13 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 337px;
+height: 217px;
+left: 977px;
+top: 579.3px;
+
+background: #FFFFFF;
+border: 2px solid #A9DDE4;
+
+
+/* text */
+
+position: absolute;
+width: 285px;
+height: 180px;
+left: 1005px;
+top: 585.3px;
+
+
+
+/* Спиридонова Анастасия Евгеньевна */
+
+position: absolute;
+width: 259px;
+height: 126px;
+left: 1005px;
+top: 585.3px;
+
+font-family: 'Lora';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 41px;
+
+color: #282828;
+
+
+
+/* Стоматолог-терапевт. */
+
+position: absolute;
+width: 285px;
+height: 34px;
+left: 1005px;
+top: 731.3px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 29px;
+
+color: #282828;
+
+
+
+/* DentalClinic */
+
+position: absolute;
+width: 219px;
+height: 51.92px;
+left: 1154px;
+top: 48px;
+
+font-family: 'Jomhuria';
+font-style: normal;
+font-weight: 400;
+font-size: 72px;
+line-height: 72px;
+
+color: #000000;
+

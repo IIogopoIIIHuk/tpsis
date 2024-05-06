@@ -1,0 +1,90 @@
+
+.link_index {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.appointment-card {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Параметры box-shadow: горизонтальное смещение, вертикальное смещение, размытие, цвет */
+}
+
+.service-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.service-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.service-info h2 {
+    margin-top: 0;
+}
+
+.service-info p {
+    margin-bottom: 10px;
+}
+
+
+.cancel-button {
+    background-color: #655b5b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.cancel-button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.sort-button {
+    background-color: #756e11;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sort-button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+.profile-link {
+    float: right;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
+}
