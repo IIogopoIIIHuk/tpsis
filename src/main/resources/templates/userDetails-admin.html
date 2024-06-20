@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+  <link rel="stylesheet" href="/css/adminStyles.css">
+  <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+<a href="/" class="link_index">DentalClinic</a>
+<a href="/profile" class="profile-link">Профиль</a>
+<div class="container">
+  <h1>Детали пользователя</h1>
+  <div class="user-details">
+    <p>ID: <span th:text="${user.id}">1</span></p>
+    <p>Имя пользователя: <span th:text="${user.username}">username</span></p>
+    <p>Статус: <span th:text="${user.active} ? 'Active' : 'Blocked'">Status</span></p>
+  </div>
+
+  <h2>Записи</h2>
+  <div th:each="appointment : ${appointments}" class="appointment-card">
+    <div class="service-image">
+      <img th:src="@{'/images/' + ${appointment.service.title} + '.png'}" alt="Service Image">
+    </div>
+    <div class="service-info">
+      <h2 th:text="${appointment.service.title}">Service Title</h2>
+      <p th:text="${appointment.service.description}">Service Description</p>
+      <p>Дата записи: <span th:text="${appointment.appointmentDate}">Дата</span></p>
+      <form th:action="@{/userDetails-admin/markCompleted}" method="post" style="display:inline;">
+        <input type="hidden" name="appointmentId" th:value="${appointment.id}">
+        <input type="hidden" name="userId" th:value="${user.id}">
+        <button type="submit" class="complete-button">Отметить как исполнено</button>
+      </form>
+    </div>
+  </div>
+
+  <a href="/listUsers-admin" class="back-button">Назад к пользователям</a>
+</div>
+
+</body>
+</html>

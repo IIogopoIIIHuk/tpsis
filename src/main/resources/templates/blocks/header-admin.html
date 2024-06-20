@@ -1,0 +1,23 @@
+<div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <header class="header">
+        <div class="container">
+
+
+            <nav class="nav">
+                <a class="nav__link active" href="#nav_about" onclick="smoothScroll('#nav_about')">About</a>
+                <a class="nav__link" href="#nav_service" onclick="smoothScroll('#nav_service')">Service</a>
+                <a class="nav__link" href="listUsers-admin">Users</a>
+                <a class="nav__link" href="other-clinics">Admin</a>
+                <a class="nav__link" href="contacts">Contact</a>
+            </nav>
+
+            <div class="sign-in-button_username">
+                <h2><i th:text="${user.username}"></i></h2>
+                <a class="logout" href="login">Выйти</a>
+            </div>
+
+
+
+        </div>
+    </header>
+</div>

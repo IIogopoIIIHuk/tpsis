@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/css/profile.css" />
+  <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+
+<a href="/" class="link_index">DentalClinic</a>
+<div class="profile-info" th:if="${user}">
+  <h1>User Profile</h1>
+  <p>
+    <label>Username:</label>
+    <span class="user-username" th:text="${user.username}"></span>
+  </p>
+    <p>
+    <label>Photo:</label>
+    <img class="user-photo" th:src="@{/getPhoto}" alt="User Photo">
+  </p>
+  <!-- Другие данные пользователя -->
+
+  <!-- Форма для загрузки фотографии пользователя -->
+  <form class="photo-upload-form" th:action="@{/uploadPhoto}" method="post" enctype="multipart/form-data">
+    <input type="file" name="photo" accept="image/*">
+    <button type="submit">Upload Photo</button>
+  </form>
+
+  <!-- Форма для редактирования данных пользователя -->
+  <form class="edit-form" th:action="@{/editProfile}" method="post">
+    <input class="edit-username" type="text" name="username" value="" placeholder="Username">
+    <input class="edit-password" type="text" name="password" value="" placeholder="Password">
+    <!-- Другие поля для редактирования -->
+    <button class="save-button" type="submit">Save Changes</button>
+  </form>
+</div>
+</body>
+</html>

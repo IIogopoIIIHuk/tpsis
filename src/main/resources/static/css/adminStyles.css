@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.link_index {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.link_index:hover {
+    text-decoration: underline;
+}
+
+.profile-link {
+    float: right;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.appointment-card {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.service-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.service-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.service-info h2 {
+    margin-top: 0;
+}
+
+.service-info p {
+    margin-bottom: 10px;
+}
+
+.cancel-button {
+    background-color: #655b5b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.cancel-button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

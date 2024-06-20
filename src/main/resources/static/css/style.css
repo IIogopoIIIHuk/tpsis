@@ -1,20 +1,20 @@
 
-body {  
-    margin: 0;    
+body {
+    margin: 0;
 
     font-family: 'Montserrat', sans-serif;
 
     font-size: 15px;
     color: #fff;
     line-height: 1.6;
-    
+
 }
 
 
 hr {
     display: block;
     width: 100%;
-    
+
     height: 1px;
     border: 0;
     margin: 40px 0;
@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
 
+}
+
+.sign-in-button_username{
+    float: right;
 }
 
 
@@ -203,11 +207,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #1059FF;
     cursor: pointer;
   }
-  
+
   button[type="submit"]:hover {
     background-color: #0F4FE6;
   }
-  
+
   .close {
     position: absolute;
     top: 10px;
@@ -218,12 +222,12 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     z-index: 2;
   }
-  
+
   .close:hover {
     color: #000000;
   }
-  
-  
+
+
 .tabcontent {
     display: none;
     animation: fadeIn 0.5s ease forwards;
@@ -285,9 +289,9 @@ h1, h2, h3, h4, h5, h6 {
 
     width: 100%;
     height: 100vh;
-    background: #A9DDE4;  
+    background: #A9DDE4;
     -webkit-background-size: cover;
-    background-size: cover;    
+    background-size: cover;
 }
 
 
@@ -342,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro__image{
     float:right;
-    margin: 20px;  
+    margin: 20px;
 }
 
 
@@ -350,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Nav */
-.nav {  
+.nav {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -406,7 +410,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav__link__service {
-    display: inline-block;    
+    display: inline-block;
     position: relative;
     color: #000000;
     text-decoration: none;
@@ -438,7 +442,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover {
     background-color: #ffffff;
     color: #333;
-    
+
 }
 
 .loginButton {
@@ -461,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
 .loginButton:hover{
     background-color: #ffffff;
     color: #333;
-    
+
 }
 
 
@@ -518,31 +522,37 @@ h1, h2, h3, h4, h5, h6 {
     color: #616161;
 }
 
- 
+
 
 /* Service */
 
 .service {
+    margin-left: 65px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+    gap: 20px; /* Зазор между элементами */
+    margin-top: 20px;
+
+}
+
+.service__item {
+
     display: flex;
-    justify-content: space-between;
-    
-    margin: 0 90px;
+    align-items: center;
 }
 
 
-.services__item {
-    width: 400px;
-}
 
-.services__img:hover {
-    transform: scale(1.1);
-}
+/*.services__img:hover {*/
+/*    transform: scale(1.1);*/
+/*}*/
 
 /* .about__item:hover .about__img img {
     opacity: .9;
 } */
 
 .services__img {
+    justify-content: space-between;
     /* background: linear-gradient(to bottom, #50a383,
     #fce38a); */
     transition: transform .2s linear;
@@ -574,7 +584,7 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     margin-right: 20px;
     margin-top: -250px;
-    
+
 }
 
 
@@ -622,9 +632,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background: #A9DDE4;  
+    background: #A9DDE4;
     -webkit-background-size: cover;
-    background-size: cover;  
+    background-size: cover;
     font-size: 6px;
 }
 
@@ -658,5 +668,5 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Kaushan Script', cursive;
     text-align: center;
     margin-bottom: 20px;
-    
+
 }

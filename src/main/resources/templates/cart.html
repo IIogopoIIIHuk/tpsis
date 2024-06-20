@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Appointments</title>
+    <link rel="stylesheet" href="/css/PageServices.css">
+    <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+<a href="/" class="link_index">DentalClinic</a>
+<a href="/profile" class="profile-link">Профиль</a>
+
+<div class="container" id="page-content">
+    <h1>Записи пользователя</h1>
+    <button class="sort-button" onclick="sortAppointments()">Сортировать по дате</button>
+    <div th:each="appointment : ${appointments}" class="appointment-card">
+        <div class="service-image">
+            <img th:src="@{'/images/' + ${appointment.service.title} + '.png'}" alt="Service Image">
+        </div>
+        <div class="service-info">
+            <h2 th:text="${appointment.service.title}">Service Title</h2>
+            <p th:text="${appointment.service.description}">Service Description</p>
+            <p>Дата записи: <span th:text="${appointment.appointmentDate}">Дата</span></p>
+            <form th:action="@{/appointment/cancel}" method="post" style="display:inline;">
+                <input type="hidden" name="id" th:value="${appointment.id}">
+                <button type="submit" class="cancel-button">Отменить</button>
+            </form>
+        </div>
+    </div>
+    <button class="download-button" onclick="downloadPDF()">Download as PDF</button>
+</div>
+
+
+<script>
+    function sortAppointments() {
+        window.location.href = '/appointment/cart?sort=date';
+    }
+
+    function downloadPDF() {
+        var element = document.getElementById('page-content');
+        html2pdf()
+            .from(element)
+            .save('cart.pdf');
+    }
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

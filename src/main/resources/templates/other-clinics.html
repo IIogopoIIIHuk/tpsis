@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Other Clinics</title>
+    <link rel="stylesheet" href="/css/other-clinics.css">
+    <style>
+        .page-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .table-container {
+            flex: 1;
+            margin-right: 20px;
+            max-width: 600px;
+        }
+        .chart-container {
+            flex: 1;
+            max-width: 500px;
+        }
+        .clinic-table, .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px; /* Отступ между таблицами */
+        }
+        .clinic-table-header, .clinic-cell, .services-table-header, .services-cell {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .clinic-table-header, .services-table-header {
+            background-color: #f2f2f2;
+        }
+        .clinic-row:hover, .services-row:hover {
+            background-color: #f1f1f1;
+        }
+        .download-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer.
+        }
+        .download-button:hover {
+            background-color: #45a049.
+        }
+    </style>
+    <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+<a href="/" class="link link_index">DentalClinic</a>
+<a href="profile" class="link profile-link">Профиль</a>
+<section class="section">
+    <div class="container">
+        <h1 class="page-title">Other Clinics</h1>
+        <div class="page-container" id="page-content">
+            <div class="table-container">
+                <table class="clinic-table">
+                    <thead>
+                    <tr>
+                        <th class="clinic-table-header">Name</th>
+                        <th class="clinic-table-header">Address</th>
+                        <th class="clinic-table-header">Services</th>
+                        <th class="clinic-table-header">Prices</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="clinic : ${otherClinics}" class="clinic-row">
+                        <td class="clinic-cell" th:text="${clinic.name}">Clinic Name</td>
+                        <td class="clinic-cell" th:text="${clinic.address}">Address</td>
+                        <td class="clinic-cell" th:text="${clinic.services}">Services</td>
+                        <td class="clinic-cell" th:text="${clinic.prices}">Prices</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- New Services Table -->
+                <table class="services-table">
+                    <thead>
+                    <tr>
+                        <th class="services-table-header">Service Title</th>
+                        <th class="services-table-header">Count</th>
+                        <th class="services-table-header">Total Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="service : ${serviceSummaries}" class="services-row">
+                        <td class="services-cell" th:text="${service.serviceTitle}">Service Title</td>
+                        <td class="services-cell" th:text="${service.count}">Count</td>
+                        <td class="services-cell" th:text="${service.totalAmount}">Total Amount</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- Total Earnings -->
+                <div>
+                    <strong>Total Earnings: </strong>
+                    <span th:text="${totalEarnings}">0</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <button class="download-button" onclick="downloadPDF()">Download as PDF</button>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>
+    function downloadPDF() {
+        var element = document.getElementById('page-content');
+        html2pdf()
+            .from(element)
+            .save('other-clinics.pdf');
+    }
+
+    // Данные о клиниках
+    var clinics = [
+        {
+            name: "Dental4Windows",
+            address: "123 Main St",
+            services: ["Dentistry", "Orthodontics"],
+            prices: "$50 - $200"
+        },
+        {
+            name: "DentalTap",
+            address: "456 Elm St",
+            services: ["Pediatrics", "General Medicine"],
+            prices: "$60 - $250"
+        },
+        {
+            name: "Dentist Plus",
+            address: "789 Oak St",
+            services: ["Ophthalmology", "Dermatology"],
+            prices: "$70 - $300"
+        }
+    ];
+
+    // Массив меток для оси X (названия клиник)
+    var clinicNames = clinics.map(function(clinic) {
+        return clinic.name;
+    });
+
+    // Массив данных для оси Y (средняя цена услуг)
+    var averagePrices = clinics.map(function(clinic) {
+        var prices = clinic.prices.split(' - '); // Разделение цен на две отдельные цены
+        var sum = prices.reduce((acc, curr) => acc + parseInt(curr.replace('$', '')), 0); // Суммирование цен
+        return sum / prices.length; // Вычисление средней цены
+    });
+
+    // Объект данных для графика
+    var clinicData = {
+        labels: clinicNames,
+        datasets: [{
+            label: 'Average Prices',
+            data: averagePrices,
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    // Создание графика
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: clinicData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

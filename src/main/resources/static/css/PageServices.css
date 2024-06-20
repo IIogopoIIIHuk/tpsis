@@ -1,3 +1,29 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000; /* Changed from #fff to #000 for visibility */
+    line-height: 1.6;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    margin: 40px 0;
+    background-color: #b4b4b4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 
 .link_index {
     color: #000000;
@@ -6,6 +32,19 @@
     font-size: 32px;
 }
 
+.link_index:hover {
+    text-decoration: underline;
+}
+
+.profile-link {
+    float: right;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
+}
 
 .container {
     max-width: 800px;
@@ -18,7 +57,7 @@
     background-color: #fff;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Параметры box-shadow: горизонтальное смещение, вертикальное смещение, размытие, цвет */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
 .service-image {
@@ -43,7 +82,6 @@
 .service-info p {
     margin-bottom: 10px;
 }
-
 
 .cancel-button {
     background-color: #655b5b;
@@ -78,13 +116,153 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
 }
 
-
-.profile-link {
-    float: right;
-    font-size: 20px;
+.service-title {
     color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
+.service-description {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-price {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-form label {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.service-form input[type="datetime-local"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.service-form button {
+    height: 40px;
+    align-items: center;
+    display: inline-block;
+    padding: 8px 30px;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #000000;
+    transition: .2s linear, color .2s linear;
+}
+
+.service-form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.download-button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #2f2f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #f39751;
+}
+
+
+/* Добавляем стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .service-image {
+        padding: 10px;
+    }
+
+    .service-info {
+        padding: 10px;
+    }
+
+    .sort-button,
+    .cancel-button,
+    .download-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .service-form input[type="datetime-local"] {
+        width: 100%;
+    }
+}
+
+/* Добавляем стили для планшетов и меньших экранов */
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* Добавляем стили для больших экранов */
+@media only screen and (min-width: 800px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+/*!* Стили для поля выбора времени *!*/
+/*#time {*/
+/*    background-color: #f2f2f2;*/
+/*    color: #333;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 5px;*/
+/*    padding: 8px;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Стили для опций выбора времени при наведении *!*/
+/*#time option:hover {*/
+/*    background-color: #ddd;*/
+/*}*/
+
+/*!* Стили для опций выбора времени *!*/
+/*#time option {*/
+/*    padding: 5px;*/
+
+/*}*/
+
+.time{
+    margin-bottom: 10px;
+}
+
+
+

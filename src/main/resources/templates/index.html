@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet">
+    <title>DentalClinic</title>
+    <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+<div th:if="${user != null and user.isAdmin()}">
+    <div th:replace="blocks/header-admin :: header"></div>
+</div>
+<div th:if="${user != null and !user.isAdmin()}">
+    <div th:replace="blocks/header-user :: header"></div>
+</div>
+<div th:if="${user == null}">
+    <div th:replace="blocks/header :: header"></div>
+</div>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__suptitle">DentalClinic</h2>
+            <h2 class="intro__suptitle_address">
+                Минск, ул, Бровки 4, корпус 2, 3 этаж
+                Время работы: будние дни 9:00-16:00
+            </h2>
+        </div>
+        <div class="intro__image">
+            <img src="/images/ракушка__интро__image.png" alt="img-0" width="675px">
+        </div>
+        <a class="btn" href="#nav_about" onclick="smoothScroll('#nav_about')">Learn more</a>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h3 class="section__suptitle" id="nav_service">Услуги</h3>
+            </div>
+
+
+
+            <div class="service">
+                <div class="service__item" th:each="service : ${services}">
+                    <div class="services__img">
+                        <img th:src="@{'/images/' + ${service.title} + '.png'}" alt="img-1" />
+                        <nav class="nav">
+                            <a class="nav__link__service" th:href="@{'/service/' + ${service.id}}"
+                               th:text="${service.title}">Service Title</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="about">
+        <div class="title__about">
+            <h2 id="nav_about">О НАС</h2>
+        </div>
+        <div class="text__about">
+            <h2>
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+            </h2>
+        </div>
+        <div class="image__about">
+            <img src="/images/Картинка%20О%20НАС.png" alt="img-1" width="600px">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <h2 class="footer__suptitle">DentalClinic</h2>
+                <div class="image__footer">
+                    <img src="/images/футеровские%20камушки.png">
+                </div>
+            </div>
+        </div>
+        <h3 class="footer__network">
+            Все права защищены © 2022 - 2024
+        </h3>
+    </div>
+    <script src="/static/script.js" async></script>
+</div>
+</body>
+</html>

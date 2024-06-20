@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${service.title}">Service Details</title>
+    <link rel="stylesheet" href="/css/PageServices.css">
+    <script>
+        function generateTimeSlots() {
+            const select = document.getElementById('time');
+            select.innerHTML = ''; // Очистка существующих опций
+
+            const startTime = new Date();
+            startTime.setHours(9, 0, 0, 0);
+            const endTime = new Date();
+            endTime.setHours(21, 0, 0, 0);
+
+            while (startTime < endTime) {
+                const option = document.createElement('option');
+                const hours = startTime.getHours().toString().padStart(2, '0');
+                const minutes = startTime.getMinutes().toString().padStart(2, '0');
+                option.value = `${hours}:${minutes}`;
+                option.text = `${hours}:${minutes}`;
+                select.appendChild(option);
+                startTime.setMinutes(startTime.getMinutes() + 30);
+            }
+        }
+
+        window.onload = generateTimeSlots;
+
+        // function checkAuthAndSubmit(event) {
+        //     const isAuthenticated = /* Ваша логика проверки авторизации */;
+        //     if (!isAuthenticated) {
+        //         event.preventDefault(); // Предотвращаем отправку формы
+        //         alert("Вы не авторизованы. Пожалуйста, войдите в свою учетную запись."); // Или другое уведомление для пользователя
+        //         window.location.href = "/login"; // Перенаправляем пользователя на страницу входа
+        //     }
+        // }
+
+
+    </script>
+
+    <link rel="icon" href="/images/икона.png" type="image/x-icon">
+</head>
+<body>
+<a href="/" class="link_index">DentalClinic</a>
+<a href="profile" class="profile-link">Профиль</a>
+<section class="section">
+    <div class="container">
+        <h1 th:text="${service.title}" class="service-title">Service Title</h1>
+        <p th:text="${service.description}" class="service-description">Service Description</p>
+        <p class="service-price">Цена: <span th:text="${service.price}">0</span> руб.</p>
+        <form th:action="@{/service/{id}/appointment(id=${service.id})}" method="post" class="service-form">
+            <label for="date">Выберите дату:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Выберите время:</label>
+            <select class="time" id="time" name="time" required></select>
+            <input type="hidden" name="userId" value="1">
+            <button type="submit" class="button_record">Записаться</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

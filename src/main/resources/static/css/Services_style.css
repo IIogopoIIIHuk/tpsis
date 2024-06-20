@@ -1,25 +1,18 @@
-
-body {  
-    margin: 0;    
-
+body {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
-
     font-size: 15px;
     color: #fff;
     line-height: 1.6;
-    
 }
-
 
 hr {
     display: block;
     width: 100%;
-    
     height: 1px;
     border: 0;
     margin: 40px 0;
-
-    background-color: #b4b4b4 ;
+    background-color: #b4b4b4;
 }
 
 *,
@@ -32,15 +25,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-
-/* header */
-
-.header_diag {
-    text-align: right;
-    margin: 0 20px;
-}
-
-    
 .link_index {
     color: #000000;
     text-decoration: none;
@@ -48,101 +32,139 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
 }
 
-
-.intro {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-}
-
-
-.text_header {
+.profile-link {
+    float: right;
+    font-size: 20px;
     color: #000000;
-    position: absolute;
-    font-size: 40px;
-    margin: 50px 50px;
-    
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-.middle_content {
+.appointment-card {
     display: flex;
-    justify-content: center; /* Выравниваем содержимое по горизонтали по центру */
-    margin-left: 150px; /* Отступ слева от края страницы */
-    margin-right: 150px; /* Отступ справа от края страницы */
-    margin-top: 200px;
-    color: #000000;
-}
-
-.text_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center; /* Выравниваем текст по вертикали по центру */
-
-}
-
-.suptitle_top{
-    color:#000000;
-    margin-left: 70px; /* Добавляем немного отступа между текстом и изображением */
-    width: 500px;
+    background-color: #fff;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
-
-
-.suptitle{
-    color:#000000;
-    margin-left: 70px;
-    width: 500px;
+.service-image {
+    flex: 1;
+    padding: 20px;
 }
 
-
-
-/* Form */
-
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
+.service-info {
+    flex: 2;
+    padding: 20px;
+}
 
-  
-.input-group {
+.service-info h2 {
+    margin-top: 0;
+}
+
+.service-info p {
+    margin-bottom: 10px;
+}
+
+.cancel-button {
+    background-color: #655b5b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.cancel-button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.sort-button {
+    background-color: #756e11;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sort-button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.service-title {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-description {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-price {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
-    margin-bottom: 15px;
 }
 
-.input-group input {
-    border: 2px solid #ccc; 
-    padding: 10px; 
-    font-size: 16px; 
+.service-form label {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.service-form input[type="datetime-local"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
     width: 200px;
 }
 
-.input-group input::placeholder {
-    color: #aaa; 
-}
-
-.input-group label {
-    color: #000000;
-    margin-bottom: 5px; 
-    
-}
-
-.button_record {
+.service-form button {
     height: 40px;
     align-items: center;
     display: inline-block;
     padding: 8px 30px;
-    border: 2px solid  #000000;
+    border: 2px solid #000000;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 20px;
@@ -152,12 +174,18 @@ h1, h2, h3, h4, h5, h6 {
     transition: .2s linear, color .2s linear;
 }
 
-
-.button_record:hover {
+.service-form button:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-.form-container input, .form-container button {
-    margin: 0 60px; 
+.profile-link {
+    float: right;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
 }
+

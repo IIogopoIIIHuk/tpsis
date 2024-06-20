@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000; /* Цвет текста */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Link styles */
+.link {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link_index {
+    font-size: 32px;
+}
+
+.link_index:hover {
+    text-decoration: underline;
+}
+
+/* Table styles */
+.clinic-table, .services-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clinic-table-header, .services-table-header {
+    background-color: #f2f2f2;
+}
+
+.clinic-table th, .clinic-table td, .services-table th, .services-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc; /* Цвет горизонтальных линий */
+}
+
+.clinic-table th, .services-table th {
+    text-align: left;
+}
+
+/* Clinic row styles */
+.clinic-row:nth-child(even), .services-row:nth-child(even) {
+    background-color: #f2f2f2; /* Цвет фона четных строк */
+}
+
+.clinic-cell, .services-cell {
+    vertical-align: top;
+}
+
+/* Page title styles */
+.page-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Profile link styles */
+.profile-link {
+    float: right;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    width: 80%;
+}
+
+.chart {
+    width: 100%;
+    height: auto;
+}
+
+.chart-legend {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.chart-legend-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.chart-legend-item span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+/* Colors for legend items */
+.legend-color1 { background-color: #ff6347; }
+.legend-color2 { background-color: #4682b4; }
+.legend-color3 { background-color: #32cd32; }
+/* Add more colors as needed */
+
+canvas#myChart {
+    display: block;
+    width: 400px; /* Увеличьте или уменьшите значение в соответствии с вашими потребностями */
+    height: 300px; /* Увеличьте или уменьшите значение в соответствии с вашими потребностями */
+    margin: 20px auto; /* Чтобы разместить график по центру страницы */
+}
